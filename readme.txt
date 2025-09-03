@@ -1,43 +1,84 @@
-# ⚡ SEMS Portal Scraper – Gedung 3 Teknik Elektro
+============================================================
+   ⚡ SEMS PORTAL SCRAPER – GEDUNG 3 TEKNIK ELEKTRO ⚡
+============================================================
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Selenium](https://img.shields.io/badge/selenium-latest-green.svg)
-![Status](https://img.shields.io/badge/status-active-success.svg)
+   🔹 Scraper otomatis untuk SEMS Portal UNS
+   🔹 Ambil data energi dari dashboard monitoring
+   🔹 Kirim data langsung ke API iotlab-uns.com
 
-> 🚀 **Scraping otomatis dari SEMS Portal** untuk Gedung 3 Teknik Elektro.  
-> Data energi diambil secara periodik, kemudian dikirim ke API `iotlab-uns.com`.
+============================================================
+✨ Fitur Utama
+============================================================
+✅ Login otomatis ke SEMS Portal  
+✅ Klik otomatis "Gedung 3 Teknik" → pindah ke tab monitoring  
+✅ Refresh halaman setiap 40–60 menit (acak)  
+✅ Ambil data energi:
+   • PV Generation Today  
+   • Income Today  
+   • Total Generation  
+   • Total Income  
+   • Power (Daya)  
+✅ Upload data ke API  
+✅ Auto relogin jika sesi login kadaluarsa  
 
----
+============================================================
+🛠️ Persyaratan
+============================================================
+- Python 3.8+  
+- Browser: Firefox  
+- Paket Python:  
+  • selenium  
+  • webdriver-manager  
+  • requests  
+- (Opsional untuk server tanpa GUI) → xvfb  
 
-## ✨ Fitur Utama
-- 🔑 **Login otomatis** ke SEMS Portal
-- 🏢 Klik otomatis **Gedung 3 Teknik** dan pindah ke tab monitoring
-- 🔄 Refresh halaman acak setiap **40–60 menit**
-- 📊 Ambil data real-time:
-  - PV Generation Today
-  - Income Today
-  - Total Generation
-  - Total Income
-  - Power (Daya)
-- ☁️ Kirim data otomatis ke API
-- ♻️ **Auto-relogin** jika sesi login kadaluarsa
+============================================================
+⚙️ Instalasi
+============================================================
+1️⃣ Clone repository  
+   git clone https://github.com/username/repo-name.git  
+   cd repo-name  
 
----
+2️⃣ Buat virtual environment  
+   python3 -m venv venv  
+   source venv/bin/activate  
 
-## 📦 Persyaratan
-- Python **3.8+**
-- Browser: **Firefox**
-- Paket Python:
-  - `selenium`
-  - `webdriver-manager`
-  - `requests`
-- (Opsional) **xvfb** → jika dijalankan di server Linux tanpa GUI
+3️⃣ Install dependency  
+   pip install --upgrade pip  
+   pip install -r requirements.txt  
 
----
+============================================================
+▶️ Menjalankan Script
+============================================================
+💻 Dengan GUI (desktop/server dengan tampilan):  
+   python scrapping.py  
 
-## ⚙️ Instalasi
+🌐 Tanpa GUI (Linux headless server):  
+   sudo apt install -y xvfb  
+   xvfb-run -a python scrapping.py  
 
-1. **Clone repository**
-   ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+============================================================
+📦 File requirements.txt
+============================================================
+selenium  
+webdriver-manager  
+requests  
+
+============================================================
+🛑 Stop Script
+============================================================
+Tekan CTRL + C di terminal untuk menghentikan.  
+
+============================================================
+📌 Catatan
+============================================================
+- Script berjalan selamanya sampai dihentikan manual.  
+- Interval scraping: random 40–60 menit.  
+- Pastikan koneksi internet stabil agar data berhasil dikirim.  
+
+============================================================
+📜 Lisensi
+============================================================
+Proyek ini dibuat untuk kebutuhan Smart ENMS UNS.  
+Silakan gunakan sesuai kebutuhan dengan mencantumkan kredit.  
+============================================================
