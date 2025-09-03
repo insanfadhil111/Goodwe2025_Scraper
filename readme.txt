@@ -1,40 +1,43 @@
-# Scraping SEMS Portal (Gedung 3 Teknik)
+# ⚡ SEMS Portal Scraper – Gedung 3 Teknik Elektro
 
-Script ini digunakan untuk **scraping data monitoring SEMS Portal** (Gedung 3 Teknik Elektro) secara otomatis menggunakan **Python + Selenium**.  
-Data hasil scraping akan dikirim ke API `http://iotlab-uns.com/smart-enms/api/add-gwdata`.
+![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+![Selenium](https://img.shields.io/badge/selenium-latest-green.svg)
+![Status](https://img.shields.io/badge/status-active-success.svg)
+
+> 🚀 **Scraping otomatis dari SEMS Portal** untuk Gedung 3 Teknik Elektro.  
+> Data energi diambil secara periodik, kemudian dikirim ke API `iotlab-uns.com`.
 
 ---
 
-## 🚀 Fitur
-- Login otomatis ke SEMS Portal
-- Klik otomatis `Gedung 3 Teknik` dan pindah ke tab monitoring
-- Refresh halaman acak setiap **40–60 menit**
-- Ambil data:
+## ✨ Fitur Utama
+- 🔑 **Login otomatis** ke SEMS Portal
+- 🏢 Klik otomatis **Gedung 3 Teknik** dan pindah ke tab monitoring
+- 🔄 Refresh halaman acak setiap **40–60 menit**
+- 📊 Ambil data real-time:
   - PV Generation Today
   - Income Today
   - Total Generation
   - Total Income
   - Power (Daya)
-- Upload data ke API secara otomatis
-- Auto-relogin jika sesi kadaluarsa
+- ☁️ Kirim data otomatis ke API
+- ♻️ **Auto-relogin** jika sesi login kadaluarsa
 
 ---
 
 ## 📦 Persyaratan
 - Python **3.8+**
-- Paket berikut:
+- Browser: **Firefox**
+- Paket Python:
   - `selenium`
   - `webdriver-manager`
   - `requests`
-
-Jika server tanpa GUI (misalnya di Linux VPS), dibutuhkan:
-- `xvfb`
+- (Opsional) **xvfb** → jika dijalankan di server Linux tanpa GUI
 
 ---
 
-## 🔧 Instalasi
+## ⚙️ Instalasi
 
-1. Clone repo ini atau download script:
+1. **Clone repository**
    ```bash
    git clone https://github.com/username/repo-name.git
    cd repo-name
